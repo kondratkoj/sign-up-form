@@ -1,3 +1,7 @@
+:root {
+    --bkgrnd-clr: #688cac;
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -58,7 +62,7 @@ a:visited {
 }
 
 #header {
-    background-color: #0060b3;
+    background-color: var(--bkgrnd-clr);
     height: 35%;
 }
 
@@ -85,6 +89,7 @@ a:visited {
     flex: 1;
     justify-content: center;
     align-items: center;
+    background-color: rgba(54, 63, 54, 0.172);
 }
 
 .form-title {
@@ -96,14 +101,19 @@ a:visited {
 }
 
 .row {
-    width: clamp(400px, 50vw, 800px)
-    /* height: 2rem; */
-    /* flex-wrap: wrap; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: clamp(400px, 50vw, 600px)
+}
+
+.row > div {
+    display: flex;
+    flex-direction: column;
 }
 
 #footer{
-    background-color: #0060b3;
-    height: 50px;
+    background-color: var(--bkgrnd-clr);
     width: 100%;
     padding: 10px;
     height: 25%;
@@ -117,15 +127,13 @@ button {
     position: absolute;
     top: 2rem;
     left: 5rem;
-    background-color: #4d8199;
+    background-color: #327898;
     border-radius: 10px;
 }
 
 button:hover {
-    background-color: #327898;
-    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.5),
-    -10px -10px 10px white;
-    
+    background-color: #3f98c1;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.5)
 }
 
 .login-link {
@@ -146,8 +154,4 @@ input:focus,
 textarea:focus {
   background: rgb(0 0 0 / 10%);
   border-radius: 5px;
-}
-
-form > div{
-    border: 2px solid black
 }
